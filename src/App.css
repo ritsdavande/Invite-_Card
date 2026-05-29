@@ -1,0 +1,440 @@
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+.section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Typography */
+.heading-display {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.heading-serif {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.text-small {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+}
+
+/* Ornaments */
+.ornament {
+  width: 150px;
+  height: auto;
+  margin: 2rem 0;
+  opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  justify-content: center;
+  border: 10px solid transparent;
+  border-image: linear-gradient(to bottom right, #bf953f, #fcf6ba, #b38728) 1;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+/* Ganesha Icon */
+.ganesha-icon {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 2rem auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6), 0 0 0 3px var(--gold);
+  background-color: #fff; /* Ensures blending if it has a transparent bg */
+}
+
+.couple-names {
+  margin: 2rem 0;
+}
+
+.couple-names h1 {
+  margin: 0.5rem 0;
+}
+
+.weds-text {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--gold);
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  padding: 0 40px;
+  letter-spacing: 2px;
+}
+
+.weds-text::before,
+.weds-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.7;
+}
+
+.weds-text::before {
+  left: 0;
+}
+
+.weds-text::after {
+  right: 0;
+}
+
+/* Quote */
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-style: italic;
+  margin: 2rem 0;
+}
+
+/* Date Section */
+.date-section .date-display {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  margin: 1.5rem 0;
+}
+
+/* Polaroid Photo */
+.polaroid {
+  background: #fff;
+  padding: 10px 10px 40px 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+  margin: 2rem 0;
+  max-width: 300px;
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #eee;
+}
+
+/* Countdown */
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Timeline */
+.timeline {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: left;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gold);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.timeline-time {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Map/Location */
+.map-wrapper {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: var(--bg-lighter);
+}
+
+.map-iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  display: block;
+}
+
+.map-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--gold);
+  text-decoration: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.map-link:hover {
+  opacity: 0.9;
+}
+
+/* RSVP Form */
+.rsvp-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: var(--gold-light);
+}
+
+.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-bottom-color: var(--gold);
+}
+
+button.submit-btn {
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
+  color: #000;
+  border: none;
+  padding: 1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+  margin-top: 1rem;
+}
+
+button.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* Intersection Observer animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Curtain Intro Overlay */
+.curtain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: auto;
+  background: transparent;
+}
+
+.curtain-container.open {
+  pointer-events: none;
+}
+
+.curtain-panel {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  /* Rich red curtain with a repeating gradient to simulate fabric folds */
+  background: linear-gradient(90deg, #5c0000 0%, #a30000 50%, #5c0000 100%);
+  background-size: 60px 100%;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+  transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+}
+
+.curtain-left {
+  left: 0;
+  border-right: 4px solid var(--gold);
+}
+
+.curtain-right {
+  right: 0;
+  border-left: 4px solid var(--gold);
+}
+
+.curtain-container.open .curtain-left {
+  transform: translateX(-100%);
+}
+
+.curtain-container.open .curtain-right {
+  transform: translateX(100%);
+}
+
+.curtain-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.curtain-content.hidden {
+  opacity: 0;
+  transform: scale(1.5);
+  pointer-events: none;
+}
+
+.curtain-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  background-color: transparent;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 0 4px var(--gold);
+}
+
+.curtain-text {
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-style: italic;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.hidden-initially {
+  opacity: 0;
+  transform: scale(0.95);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.visible {
+  opacity: 1;
+  transform: scale(1);
+  height: auto;
+  overflow: visible;
+  transition: opacity 1s ease-in 0.5s, transform 1s ease-out 0.5s;
+}
